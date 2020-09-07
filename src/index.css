@@ -1,0 +1,7 @@
+.form-inline {
+    flex-flow: nowrap;
+}
+
+.form-inline > input {
+    margin-right: 2vw;
+}
