@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Card, Form, Button } from 'react-bootstrap';
 
-function AuthForm() {
+function Login() {
   return (
     <div className="content">
       <Card 
@@ -33,13 +32,10 @@ function AuthForm() {
                     Submit
                 </Button>
             </Form>
-        </Card.Body>
-        <Card.Footer>
-            <Link to="/login">Already have an account?</Link>
-        </Card.Footer> 
+        </Card.Body> 
       </Card>
     </div>
   );
 }
 
-export default AuthForm;
+export default Login;

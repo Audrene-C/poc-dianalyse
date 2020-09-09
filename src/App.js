@@ -9,7 +9,8 @@ import {
 import Start from './Components/Start';
 import Public from './Components/Public';
 import Private from './Components/Private';
-import About from './Components/About';
+import Login from './Components/Login';
+import Register from './Components/Register';
 import MyAccordion from './Components/MyAccordion';
 import MyFooter from './Components/MyFooter';
 import { AuthContext } from './context/auth';
@@ -30,8 +31,11 @@ function App() {
           </Route>
           <Route path="/public" component={Public} />
           <PrivateRoute path="/private" component={Private} />
-          <Route path="/about">
-            <About />
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
           </Route>
           <Route path="/">
             <MyAccordion />

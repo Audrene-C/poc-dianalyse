@@ -50,7 +50,7 @@ const MyAccordion = () => {
       </Card>
       <Card className="text-center">
         <Card.Header>
-          <ContextAwareToggle eventKey="3">About us</ContextAwareToggle>
+          <ContextAwareToggle eventKey="3">Login</ContextAwareToggle>
         </Card.Header>
         <Accordion.Collapse eventKey="3">
           <Card.Body>

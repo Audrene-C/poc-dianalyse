@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Form, Button } from 'react-bootstrap';
 
-function AuthForm() {
+function Register() {
   return (
     <div className="content">
       <Card 
@@ -12,7 +12,7 @@ function AuthForm() {
       style={{ textAlign: 'center', maxWidth: '50vw', margin: 'auto' }}
       >
         <Card.Body>
-            <Card.Title>Login</Card.Title>
+            <Card.Title>Register</Card.Title>
             <Form>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -42,4 +42,4 @@ function AuthForm() {
   );
 }
 
-export default AuthForm;
+export default Register;
