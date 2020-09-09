@@ -23,7 +23,7 @@ function ContextAwareToggle({ children, eventKey, callback}) {
 
 const MyAccordion = () => {
   return (
-    <Accordion>
+    <Accordion className="content">
       <Card className="text-center">
         <Card.Header>
           <ContextAwareToggle eventKey="0">Getting started</ContextAwareToggle>

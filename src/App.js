@@ -12,22 +12,24 @@ import Private from './Components/Private';
 import About from './Components/About';
 import MyAccordion from './Components/MyAccordion';
 import MyFooter from './Components/MyFooter';
+import { AuthContext } from './context/auth';
+import PrivateRoute from './PrivateRoute';
 
 function App() {
   return (
     <div className="App">
+      <AuthContext.Provider value={false}>
+
       <Router>
+
         <MyNavbar />
+
         <Switch>
           <Route path="/start">
             <Start />
           </Route>
-          <Route path="/public">
-            <Public />
-          </Route>
-          <Route path="/private">
-            <Private />
-          </Route>
+          <Route path="/public" component={Public} />
+          <PrivateRoute path="/private" component={Private} />
           <Route path="/about">
             <About />
           </Route>
@@ -35,9 +37,12 @@ function App() {
             <MyAccordion />
           </Route>
         </Switch>
+
       </Router>
 
       <MyFooter />
+
+      </AuthContext.Provider>
     </div>
   );
 }

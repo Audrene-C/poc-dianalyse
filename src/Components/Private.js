@@ -1,8 +1,10 @@
 import React from 'react';
 
-function Private() {
+function Private(props) {
   return (
-    <h1>Private</h1>
+    <div className="content">
+      <h1>Private</h1>
+    </div>
   );
 }
 

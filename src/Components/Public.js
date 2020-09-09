@@ -1,8 +1,10 @@
 import React from 'react';
 
-function Public() {
+function Public(props) {
   return (
-    <h1>Public</h1>
+    <div className="content">
+      <h1>Public</h1>
+    </div>
   );
 }
 
