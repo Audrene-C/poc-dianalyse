@@ -1,7 +1,25 @@
+html, body, #root {
+    margin: 0;
+    height: 100%;
+}
+
 .form-inline {
     flex-flow: nowrap;
 }
 
 .form-inline > input {
     margin-right: 2vw;
+}
+
+.card-header > button {
+    align-items: center;
+}
+
+.accordion {
+    min-height: 85vh;
+    background-color: white;
+}
+
+#root {
+    background-color: black;
 }

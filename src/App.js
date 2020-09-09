@@ -7,29 +7,38 @@ import {
   Route
 } from "react-router-dom";
 import Start from './Components/Start';
-import Stuff from './Components/Stuff';
-import More from './Components/More';
+import Public from './Components/Public';
+import Private from './Components/Private';
 import About from './Components/About';
+import MyAccordion from './Components/MyAccordion';
+import MyFooter from './Components/MyFooter';
 
 function App() {
   return (
+    <div className="App">
       <Router>
         <MyNavbar />
         <Switch>
           <Route path="/start">
             <Start />
           </Route>
-          <Route path="/stuff">
-            <Stuff />
+          <Route path="/public">
+            <Public />
           </Route>
-          <Route path="/more">
-            <More />
+          <Route path="/private">
+            <Private />
           </Route>
           <Route path="/about">
             <About />
           </Route>
+          <Route path="/">
+            <MyAccordion />
+          </Route>
         </Switch>
       </Router>
+
+      <MyFooter />
+    </div>
   );
 }
 

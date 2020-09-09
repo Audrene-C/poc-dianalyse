@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from "react-router-dom";
 import MyRouter from './MyRouter';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -9,14 +10,14 @@ import Logo from '../logo.png';
 function MyNavbar() {
   return (
     <Navbar expand="lg" bg="dark" variant="dark">
-      <Navbar.Brand href="#home">
+      <Link to="/">
         <img
           src={Logo}
           height="50vh"
-          className="d-inline-block align-top"
+          className="d-inline-block align-top mr-2"
           alt="logo"
         />
-      </Navbar.Brand>
+      </Link>
       <Navbar.Brand>Di-Analyse Signal</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
