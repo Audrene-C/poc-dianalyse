@@ -13,8 +13,8 @@ function MyNavbar() {
       <Link to="/">
         <img
           src={Logo}
-          height="50vh"
-          className="d-inline-block align-top mr-2"
+          height="100vh"
+          className="d-inline-block align-top m-2"
           alt="logo"
         />
       </Link>

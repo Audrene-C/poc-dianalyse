@@ -2,13 +2,15 @@ import React from 'react';
 import { Card, Form, Button } from 'react-bootstrap';
 
 function Login() {
+
   return (
-    <div className="content">
+    <div className="content d-flex">
       <Card 
       bg="dark"
       text="white"
       border="danger"
-      style={{ textAlign: 'center', maxWidth: '50vw', margin: 'auto' }}
+      className="login-register my-auto mx-auto"
+      style={{ textAlign: 'center'}}
       >
         <Card.Body>
             <Card.Title>Login</Card.Title>

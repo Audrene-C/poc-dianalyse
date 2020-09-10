@@ -13,7 +13,8 @@ function ContextAwareToggle({ children, eventKey, callback}) {
   return (
     <Button 
     type="button"
-    variant={ isCurrentEventKey ? 'danger' : 'dark' }
+    style={{ backgroundColor: "#343a40" }}
+    variant={ isCurrentEventKey ? 'outline-danger' : 'outline-light' }
     onClick={decoratedOnClick}
     >
       {children}   
@@ -23,35 +24,27 @@ function ContextAwareToggle({ children, eventKey, callback}) {
 
 const MyAccordion = () => {
   return (
-    <Accordion className="content">
+    <Accordion defaultActiveKey="0" className="content">
       <Card className="text-center">
-        <Card.Header>
-          <ContextAwareToggle eventKey="0">Getting started</ContextAwareToggle>
-        </Card.Header>
+        <ContextAwareToggle as={Card.Header} eventKey="0">Getting started</ContextAwareToggle>
         <Accordion.Collapse eventKey="0">
           <Card.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Card.Body>
         </Accordion.Collapse>
       </Card>
       <Card className="text-center">
-        <Card.Header>
-          <ContextAwareToggle eventKey="1">Public</ContextAwareToggle>
-        </Card.Header>
+        <ContextAwareToggle as={Card.Header} eventKey="1">Public</ContextAwareToggle>
         <Accordion.Collapse eventKey="1">
           <Card.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Card.Body>
         </Accordion.Collapse>
       </Card>
       <Card className="text-center">
-        <Card.Header>
-          <ContextAwareToggle eventKey="2">Private</ContextAwareToggle>
-        </Card.Header>
+        <ContextAwareToggle as={Card.Header} eventKey="2">Private</ContextAwareToggle>
         <Accordion.Collapse eventKey="2">
           <Card.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Card.Body>
         </Accordion.Collapse>
       </Card>
       <Card className="text-center">
-        <Card.Header>
-          <ContextAwareToggle eventKey="3">Login</ContextAwareToggle>
-        </Card.Header>
+        <ContextAwareToggle as={Card.Header} eventKey="3">Login</ContextAwareToggle>
         <Accordion.Collapse eventKey="3">
           <Card.Body>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

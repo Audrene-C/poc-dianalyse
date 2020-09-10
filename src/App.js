@@ -6,7 +6,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Start from './Components/Start';
+import Home from './Components/Home';
 import Public from './Components/Public';
 import Private from './Components/Private';
 import Login from './Components/Login';
@@ -16,30 +16,23 @@ import MyFooter from './Components/MyFooter';
 import { AuthContext } from './context/auth';
 import PrivateRoute from './PrivateRoute';
 
-function App() {
+function App() {  
+
   return (
     <div className="App">
-      <AuthContext.Provider value={false}>
+      <AuthContext.Provider value={true}>
 
       <Router>
 
         <MyNavbar />
 
         <Switch>
-          <Route path="/start">
-            <Start />
-          </Route>
+          <PrivateRoute path="/start" component={MyAccordion} />
           <Route path="/public" component={Public} />
           <PrivateRoute path="/private" component={Private} />
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
-          <Route path="/">
-            <MyAccordion />
-          </Route>
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/" component={Home} />
         </Switch>
 
       </Router>

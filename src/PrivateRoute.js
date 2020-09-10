@@ -10,7 +10,7 @@ function PrivateRoute({ component: Component, ...rest }) {
         isAuthenticated ? (
       <Component {...props} />
     ) : (
-        <Redirect to="/register" />
+        <Redirect to={{ pathname: "/register", state: { referer: props.location } }} />
     )}
     />
   );

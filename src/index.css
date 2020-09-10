@@ -15,11 +15,62 @@ html, body, #root {
     align-items: center;
 }
 
-.content {
-    min-height: 85vh;
-    background-color: white;
+#root {
+    background-image: url('https://dianalyse-signal.com/wp-content/uploads/2020/02/Capture-d%E2%80%99%C3%A9cran-2020-02-03-%C3%A0-18.48.22.png');
 }
 
-#root {
-    background-color: black;
+.content {
+    background-color: transparent;
+}
+
+.card-footer > a {
+    color: #6c757d;
+}
+
+.login-register {
+    border-width: 2px;
+}
+
+/* réglages hauteur */
+@media (height <= 568px) {
+    .content {
+        min-height: 68vh;
+    }
+}
+
+@media (569px <= height <= 640px) {
+    .content {
+        min-height: 78vh;
+    }
+}
+
+@media (641px <= height <= 667px) {
+    .content {
+        min-height: 78vh;
+    }
+}
+
+@media (668px <= height <= 736px) {
+    .content {
+        min-height: 80vh;
+    }
+}
+
+@media (737px <= height <= 823px) {
+    .content {
+        min-height: 82vh;
+    }
+}
+
+@media (height >= 824px) {
+    .content {
+        min-height: 82vh;
+    }
+}
+
+/* réglages largeur */
+@media (width >= 768px) {
+    .login-register {
+        min-width: 70vw;
+    }
 }

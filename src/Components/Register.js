@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import { Card, Form, Button } from 'react-bootstrap';
 
 function Register() {
+
   return (
-    <div className="content">
+    <div className="content d-flex">
       <Card 
       bg="dark"
       text="white"
       border="danger"
-      style={{ textAlign: 'center', maxWidth: '50vw', margin: 'auto' }}
+      className="login-register my-auto mx-auto"
+      style={{ textAlign: 'center'}}
       >
         <Card.Body>
             <Card.Title>Register</Card.Title>
@@ -35,7 +37,7 @@ function Register() {
             </Form>
         </Card.Body>
         <Card.Footer>
-            <Link to="/login">Already have an account?</Link>
+            <Link to="/login" className="light-gray">Already have an account?</Link>
         </Card.Footer> 
       </Card>
     </div>
