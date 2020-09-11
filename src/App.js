@@ -11,10 +11,10 @@ import Public from './Components/Public';
 import Private from './Components/Private';
 import Login from './Components/Login';
 import Register from './Components/Register';
-import MyAccordion from './Components/MyAccordion';
 import MyFooter from './Components/MyFooter';
 import { AuthContext } from './context/auth';
 import PrivateRoute from './PrivateRoute';
+import Start from './Components/Start';
 
 function App() {  
 
@@ -27,7 +27,7 @@ function App() {
         <MyNavbar />
 
         <Switch>
-          <PrivateRoute path="/start" component={MyAccordion} />
+          <PrivateRoute path="/start" component={Start} />
           <Route path="/public" component={Public} />
           <PrivateRoute path="/private" component={Private} />
           <Route path="/login" component={Login} />

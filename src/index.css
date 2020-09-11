@@ -15,7 +15,7 @@ html, body, #root {
     align-items: center;
 }
 
-#root {
+.App {
     background-image: url('https://dianalyse-signal.com/wp-content/uploads/2020/02/Capture-d%E2%80%99%C3%A9cran-2020-02-03-%C3%A0-18.48.22.png');
 }
 
@@ -27,26 +27,60 @@ html, body, #root {
     color: #6c757d;
 }
 
+.content, .content > .card, .card > .btn {
+    border-radius: 0px;
+}
+
+.content > .card, .card-body {
+    border: none;
+}
+
+.card > .btn {
+    border-top: 1px solid black;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
 .login-register {
-    border-width: 2px;
+    border-radius: 0px;
+    box-shadow: 0 30px 10px -10px #000;
+}
+
+.login-register > .card-body {
+    border: none;
+}
+
+.container > a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.container > a:hover {
+    color: rgba(255, 255, 255, 0.75);
 }
 
 /* réglages hauteur */
 @media (height <= 568px) {
     .content {
-        min-height: 68vh;
+        min-height: 60vh;
+    }
+    .login-register {
+        min-width: 100vw;
     }
 }
 
 @media (569px <= height <= 640px) {
     .content {
-        min-height: 78vh;
+        min-height: 62vh;
+    }
+    .login-register {
+        min-width: 100vw;
     }
 }
 
 @media (641px <= height <= 667px) {
     .content {
-        min-height: 78vh;
+        min-height: 64vh;
     }
 }
 
@@ -58,13 +92,25 @@ html, body, #root {
 
 @media (737px <= height <= 823px) {
     .content {
+        min-height: 69vh;
+    }
+}
+
+@media (824px <= height <= 1024px) {
+    .content {
         min-height: 82vh;
     }
 }
 
-@media (height >= 824px) {
+@media (1025px <= height <= 1366px) {
     .content {
-        min-height: 82vh;
+        min-height: 86vh;
+    }
+}
+
+@media (height >= 1367px) {
+    .content {
+        min-height: 88vh;
     }
 }
 

@@ -9,7 +9,6 @@ function Register() {
       <Card 
       bg="dark"
       text="white"
-      border="danger"
       className="login-register my-auto mx-auto"
       style={{ textAlign: 'center'}}
       >
